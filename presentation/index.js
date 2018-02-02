@@ -322,6 +322,54 @@ AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
           `}/>
         </Slide>
 
+          <Slide transition={["slide"]}>
+              <Text textColor='tertiary'>
+                  Custom iOS/Android Views
+              </Text>
+          </Slide>
+
+          <Slide transition={["slide"]}>
+              <Text textColor='tertiary'>
+                  Platform-Specific Components
+              </Text>
+
+              <CodePane
+                  lang="jsx"
+                  source={`
+> CustomComponent.ios.js
+> CustomComponent.android.js
+`.trim()}
+                  margin="20px auto"
+              />
+
+              <CodePane
+                  lang="jsx"
+                  source={`
+// Note - No extension specified
+import CustomComponent from './CustomComponent';
+`.trim()}
+                  margin="20px auto"
+              />
+          </Slide>
+
+          <Slide transition={["slide"]}>
+              <Text textColor='tertiary'>
+                  Platform-Specific Styles
+              </Text>
+
+              <CodePane
+                  lang="jsx"
+                  source={`
+import { Platform, StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  paddingTop: (Platform.OS === 'ios') ? 30 : 0,
+});
+`.trim()}
+                  margin="20px auto"
+              />
+          </Slide>
+
         <Slide>
           <Heading size={5}>Flex Box</Heading>
           <NativeExample code={`
@@ -349,6 +397,121 @@ class JustifyContentBasics extends Component {
 AppRegistry.registerComponent('AwesomeProject', () => JustifyContentBasics);
           `}/>
         </Slide>
+
+          <Slide transition={["slide"]}>
+              <Text textColor='tertiary'>
+                  Example: Payment Module
+              </Text>
+              <CodePane
+                  lang="java"
+                  source={require("raw-loader!../assets/java-interop-1.example")}
+                  margin="20px auto"
+              />
+          </Slide>
+
+          <Slide transition={["slide"]}>
+              <Text textColor='tertiary'>
+                  Example: React Method
+              </Text>
+              <CodePane
+                  lang="java"
+                  source={require("raw-loader!../assets/java-interop-2.example")}
+                  margin="20px auto"
+              />
+          </Slide>
+
+          <Slide transition={["slide"]}>
+              <Text textColor='tertiary'>
+                  Example: Usage
+              </Text>
+              <CodePane
+                  lang="jsx"
+                  source={require("raw-loader!../assets/java-interop-3.example")}
+                  margin="20px auto"
+              />
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="primary">
+              <Layout>
+                  <Table>
+                      <TableHeader>
+                          <TableRow>
+                              <TableHeaderItem>JavaScript</TableHeaderItem>
+                              <TableHeaderItem>Native</TableHeaderItem>
+                          </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                          <TableRow><TableItem>Bool</TableItem><TableItem>Boolean</TableItem></TableRow>
+                          <TableRow><TableItem>Number</TableItem><TableItem>Integer</TableItem></TableRow>
+                          <TableRow><TableItem>Number</TableItem><TableItem>Double</TableItem></TableRow>
+                          <TableRow><TableItem>Number</TableItem><TableItem>Float</TableItem></TableRow>
+                          <TableRow><TableItem>String</TableItem><TableItem>String</TableItem></TableRow>
+                          <TableRow><TableItem>function</TableItem><TableItem>Callback</TableItem></TableRow>
+                          <TableRow><TableItem>Object</TableItem><TableItem>ReadableMap</TableItem></TableRow>
+                          <TableRow><TableItem>Array</TableItem><TableItem>ReadableArray</TableItem></TableRow>
+                      </TableBody>
+                  </Table>
+              </Layout>
+          </Slide>
+
+          <Slide transition={["slide"]} notes={`
+            - Hierarchy
+            - Temporal Navigation
+            - Horizontal Paging
+          `}>
+              <Text textColor='tertiary'>
+                  Navigators
+              </Text>
+
+              <Appear>
+                  <Text textColor='quartenary'>
+                      The one thing I disliked
+                  </Text>
+              </Appear>
+          </Slide>
+
+          <Slide transition={["slide"]}>
+              <Text textColor='tertiary'>
+                  What's available?
+              </Text>
+
+              <List>
+                  <Appear><ListItem>Facebook - NavigatorIOS</ListItem></Appear>
+                  <Appear><ListItem>Facebook - Navigator</ListItem></Appear>
+                  <Appear><ListItem>Facebook - NavigationExperimental</ListItem></Appear>
+                  <Appear><ListItem>wix - react-native-navigation</ListItem></Appear>
+                  <Appear><ListItem>aksonov - react-native-router-flux</ListItem></Appear>
+                  <Appear><ListItem>ReactTraining - react-router (4.0 beta)</ListItem></Appear>
+                  <Appear><ListItem>exponent - ex-navigator</ListItem></Appear>
+                  <Appear><ListItem>airbnb - Not open sourced</ListItem></Appear>
+                  <Appear><ListItem>....</ListItem></Appear>
+              </List>
+          </Slide>
+
+          <Slide transition={["slide"]}>
+              <Image src={images.jackie}/>
+          </Slide>
+
+          <Slide transition={["slide"]}>
+              <Link href="https://www.react-navigation.org" textColor='tertiary'>
+                  react-navigation.org
+              </Link>
+              <Appear>
+                  <Text textColor="quartenary">
+                      ... This time we'll get it right!
+                  </Text>
+              </Appear>
+
+              <Layout>
+                  <Fill>
+                      <Android src={images.navigationAndroid} />
+                  </Fill>
+
+                  <Fill>
+                      <IPhone src={images.navigationIos} />
+                  </Fill>
+              </Layout>
+          </Slide>
 
         <Slide transition={["slide"]}>
           <Text textColor="tertiary">
@@ -471,34 +634,23 @@ AppRegistry.registerComponent('AwesomeProject', () => JustifyContentBasics);
           <Image width='35%' src={images.stackTrace}/>
         </Slide>
 
+          <Slide transition={["slide"]}>
+              <Image width="75%" src={images.reduxStateTree1} />
+          </Slide>
 
-        <Slide transition={["slide"]}>
-          <Text textColor="tertiary">
-            Feature Testing
-          </Text>
+          <Slide transition={["slide"]}>
+              <Image width="75%" src={images.reduxStateTree2} />
+          </Slide>
 
-          <List>
-            <Appear>
-              <ListItem>
-                <Link href="http://appium.io/" textColor='black'>
-                  Appium
-                </Link>
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                <Link href="http://calaba.sh/" textColor='black'>
-                  Calabash
-                </Link>
-              </ListItem>
-            </Appear>
-          </List>
-          <Appear>
-            <Text>
-              Remember: It's a real android/ios app!
-            </Text>
-          </Appear>
-        </Slide>
+          <Slide transition={["slide"]}>
+              <Text textColor="tertiary">
+                  Time Travel!
+              </Text>
+          </Slide>
+
+          <Slide transition={["slide"]}>
+              <Image width="75%" src={images.reduxTimeTravel} />
+          </Slide>
 
         <Slide transition={["slide"]}>
           <Text textColor="tertiary">
@@ -509,232 +661,27 @@ AppRegistry.registerComponent('AwesomeProject', () => JustifyContentBasics);
             <Appear><ListItem>Built-in Code Coverage</ListItem></Appear>
             <Appear><ListItem>Parallel test runner</ListItem></Appear>
             <Appear><ListItem>Mocking functions, imports, network calls</ListItem></Appear>
-            <Appear><ListItem>Jasmine API</ListItem></Appear>
           </List>
         </Slide>
 
-        <Slide transition={["slide"]}>
-          <Image width="75%" src={images.jestExample}/>
-        </Slide>
+          <Slide transition={["slide"]}>
+              <Image width="75%" src={images.jestExample}/>
+          </Slide>
 
-        <Slide transition={["spin", "slide"]} bgColor="tertiary">
-          <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
-            Other cool things
-          </Heading>
-        </Slide>
 
-        <Slide transition={["slide"]}>
-          <Text textColor='tertiary'>
-            Native Interopability
-          </Text>
-
-          <List>
-            <Appear><ListItem>Hardware</ListItem></Appear>
-            <Appear><ListItem>Performance</ListItem></Appear>
-            <Appear><ListItem>Wrap an existing Java/iOS API</ListItem></Appear>
-            <Appear><ListItem>Hybrid Native/React-Native Apps</ListItem></Appear>
-          </List>
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Text textColor='tertiary'>
-            Example: Payment Module
-          </Text>
-          <CodePane
-            lang="java"
-            source={require("raw-loader!../assets/java-interop-1.example")}
-            margin="20px auto"
-          />
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Text textColor='tertiary'>
-            Example: React Method
-          </Text>
-          <CodePane
-            lang="java"
-            source={require("raw-loader!../assets/java-interop-2.example")}
-            margin="20px auto"
-          />
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Text textColor='tertiary'>
-            Example: Usage
-          </Text>
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../assets/java-interop-3.example")}
-            margin="20px auto"
-          />
-        </Slide>
-
-        <Slide transition={["slide"]} bgColor="primary">
-          <Layout>
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHeaderItem>JavaScript</TableHeaderItem>
-                  <TableHeaderItem>Native</TableHeaderItem>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow><TableItem>Bool</TableItem><TableItem>Boolean</TableItem></TableRow>
-                <TableRow><TableItem>Number</TableItem><TableItem>Integer</TableItem></TableRow>
-                <TableRow><TableItem>Number</TableItem><TableItem>Double</TableItem></TableRow>
-                <TableRow><TableItem>Number</TableItem><TableItem>Float</TableItem></TableRow>
-                <TableRow><TableItem>String</TableItem><TableItem>String</TableItem></TableRow>
-                <TableRow><TableItem>function</TableItem><TableItem>Callback</TableItem></TableRow>
-                <TableRow><TableItem>Object</TableItem><TableItem>ReadableMap</TableItem></TableRow>
-                <TableRow><TableItem>Array</TableItem><TableItem>ReadableArray</TableItem></TableRow>
-              </TableBody>
-            </Table>
-          </Layout>
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Text textColor='tertiary'>
-            Custom iOS/Android Views
-          </Text>
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Text textColor='tertiary'>
-            Platform-Specific Components
-          </Text>
-
-          <CodePane
-            lang="jsx"
-            source={`
-> CustomComponent.ios.js
-> CustomComponent.android.js
-`.trim()}
-            margin="20px auto"
-          />
-
-        <CodePane
-            lang="jsx"
-            source={`
-// Note - No extension specified
-import CustomComponent from './CustomComponent';
-`.trim()}
-            margin="20px auto"
-          />
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Text textColor='tertiary'>
-            Platform-Specific Styles
-          </Text>
-
-        <CodePane
-            lang="jsx"
-            source={`
-import { Platform, StyleSheet } from 'react-native';
-
-const styles = StyleSheet.create({
-  paddingTop: (Platform.OS === 'ios') ? 30 : 0,
-});
-`.trim()}
-            margin="20px auto"
-          />
-        </Slide>
-
-        <Slide transition={["slide"]} notes={`
-            - Hierarchy
-            - Temporal Navigation
-            - Horizontal Paging
-          `}>
-          <Text textColor='tertiary'>
-            Navigators
-          </Text>
-
-          <Appear>
-            <Text textColor='quartenary'>
-              The one thing I disliked
-            </Text>
-          </Appear>
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Text textColor='tertiary'>
-            What's available?
-          </Text>
-
-          <List>
-            <Appear><ListItem>Facebook - NavigatorIOS</ListItem></Appear>
-            <Appear><ListItem>Facebook - Navigator</ListItem></Appear>
-            <Appear><ListItem>Facebook - NavigationExperimental</ListItem></Appear>
-            <Appear><ListItem>wix - react-native-navigation</ListItem></Appear>
-            <Appear><ListItem>aksonov - react-native-router-flux</ListItem></Appear>
-            <Appear><ListItem>ReactTraining - react-router (4.0 beta)</ListItem></Appear>
-            <Appear><ListItem>exponent - ex-navigator</ListItem></Appear>
-            <Appear><ListItem>airbnb - Not open sourced</ListItem></Appear>
-            <Appear><ListItem>....</ListItem></Appear>
-          </List>
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Image src={images.jackie}/>
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Link href="https://www.react-navigation.org" textColor='tertiary'>
-            react-navigation.org
-          </Link>
-          <Appear>
-            <Text textColor="quartenary">
-              ... This time we'll get it right!
-            </Text>
-          </Appear>
-
-          <Layout>
-            <Fill>
-              <Android src={images.navigationAndroid} />
-            </Fill>
-
-            <Fill>
-              <IPhone src={images.navigationIos} />
-            </Fill>
-          </Layout>
-        </Slide>
-
-        <Slide transition={["slide"]} bgColor="black">
-          <Heading textColor="white">
-            Redux
-          </Heading>
-
-          <Appear>
-            <Text textColor="tertiary">
-              ... Other state containers available.
-            </Text>
-          </Appear>
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Text textColor="tertiary">
-            A Single point of read-only truth
-          </Text>
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Image width="75%" src={images.reduxStateTree1} />
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Image width="75%" src={images.reduxStateTree2} />
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Text textColor="tertiary">
-            Time Travel!
-          </Text>
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Image width="75%" src={images.reduxTimeTravel} />
-        </Slide>
-
+          <Slide transition={["slide"]}>
+              <Text textColor="tertiary">
+                  Deploying with CodePush
+              </Text>
+              <List>
+                  <Appear><ListItem>Allows OTA updates of your javascript</ListItem></Appear>
+                  <Appear><ListItem>Great for bug-fixes or features</ListItem></Appear>
+                  <Appear><ListItem>CD / CI solutions like AppCenter</ListItem></Appear>
+                  <Appear><ListItem>Rollback if an update causes crashes</ListItem></Appear>
+                  <Appear><ListItem>Use multiple deployments (staging / production)</ListItem></Appear>
+                  <Appear><ListItem>Can do things like release to 20% of users</ListItem></Appear>
+              </List>
+          </Slide>
         <Slide transition={["spin", "slide"]} bgColor="tertiary">
           <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
             Questions?
