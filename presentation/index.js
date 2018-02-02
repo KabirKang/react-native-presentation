@@ -23,12 +23,13 @@ require("spectacle/lib/themes/default/dark.codemirror.css");
 
 import { FolderStructure, Folder, File } from './folders';
 
-import ReactExample from './react-example';
 import NativeExample from './native-example';
-import WithSlidesLink from './with-slides-link';
 import { IPhone, Android } from './phones';
 
 const images = {
+    threeThreads: require("../assets/three-threads.png"),
+    jsNativeBridge: require("../assets/js-native-bridge.png"),
+    verbling: require("../assets/verbling.png"),
   city: require("../assets/city.jpg"),
   buttons: require("../assets/buttons.png"),
   reactNativeElements: require("../assets/react-native-elements.png"),
@@ -72,7 +73,7 @@ const theme = createTheme({
   primary: "white",
   secondary: "#505050",
   tertiary: "#ff7e27",
-  quartenary: "#fafafa"
+  quartenary: "red"
 }, {
   primary: "Avenir",
   secondary: "Avenir"
@@ -96,89 +97,95 @@ export default class Presentation extends React.Component {
         <Slide transition={["zoom", "fade"]} bgColor="primary">
           <Heading size={2} textColor='tertiary'>react-native?</Heading>
           <List>
-            <Appear><ListItem>Developing phone apps, with React</ListItem></Appear>
-            <Appear><ListItem>Supports Android, and iOS</ListItem></Appear>
-            <Appear><ListItem>Truly native - not just a web view</ListItem></Appear>
+            <Appear><ListItem>Great dev experience of React on mobile</ListItem></Appear>
+            <Appear><ListItem>80%+ codeshare between mobile platforms</ListItem></Appear>
+            <Appear><ListItem>Competitive performance; not a hybrid app.</ListItem></Appear>
+            <Appear><ListItem>In active development; large dev community</ListItem></Appear>
           </List>
         </Slide>
 
         <Slide transition={["zoom", "fade"]} bgColor="primary">
-          <Heading size={2} textColor='tertiary'>... What is React?</Heading>
+          <Heading size={2} textColor='tertiary'>In production?!</Heading>
           <List>
-            <Appear><ListItem>A powerful way to construct user interfaces</ListItem></Appear>
-            <Appear><ListItem>Built upon the concept of Components</ListItem></Appear>
-            <Appear><ListItem>A JavaScript library used and developed by Facebook</ListItem></Appear>
-            <Appear><ListItem>Open Source</ListItem></Appear>
+            <Appear><ListItem>Verbling - language tutoring app</ListItem></Appear>
+            <Appear><ListItem>Launched on both platforms in 3 months</ListItem></Appear>
+            <Appear><ListItem>Quickly iterated like on web</ListItem></Appear>
+            <Appear><ListItem>Minor issues, but not with performance</ListItem></Appear>
           </List>
         </Slide>
 
+        <Slide>
+            <Image width="75%" src={images.verbling}/>
+        </Slide>
+
+      <Slide transition={["slide"]}>
+          <Text textColor="tertiary">
+              Who's using it?
+          </Text>
+
+          <Layout>
+              <Fill>
+                  <Image
+                      className='show-case__logo'
+                      src={logos.airbnb}
+                  />
+                  <Text textColor='grey'>Airbnb</Text>
+              </Fill>
+
+              <Fill>
+                  <Image
+                      className='show-case__logo'
+                      src={logos.facebook}
+                  />
+                  <Text textColor='grey'>Facebook</Text>
+              </Fill>
+
+              <Fill>
+                  <Image
+                      className='show-case__logo'
+                      src={logos.gyroscope}
+                  />
+                  <Text textColor='grey'>Gyroscope</Text>
+              </Fill>
+          </Layout>
+
+          <div className='show-case__separator' />
+
+          <Layout>
+              <Fill>
+                  <Image
+                      className='show-case__logo'
+                      src={logos.instagram}
+                  />
+                  <Text textColor='grey'>Instagram</Text>
+              </Fill>
+
+              <Fill>
+                  <Image
+                      className='show-case__logo'
+                      src={logos.robin}
+                  />
+                  <Text textColor='grey'>Round Robin</Text>
+              </Fill>
+
+              <Fill>
+                  <Image
+                      className='show-case__logo'
+                      src={logos.vogue}
+                  />
+                  <Text textColor='grey'>Vogue</Text>
+              </Fill>
+          </Layout>
+      </Slide>
+
         <Slide transition={["zoom", "fade"]} bgColor="primary">
-          <Heading size={2} textColor='black'>Example</Heading>
+            <Heading size={5} textColor='tertiary'>Sounds like a bunch of baloney...</Heading>
+            <Appear><Image width="100%" src={images.jsNativeBridge}/></Appear>
         </Slide>
 
-        <Slide
-          notes={`
-            Show that you can modify the element in real time.
-
-            Modify the text of the component.
-            Change MyComponent to Foo, see it break.
-          `}
-        >
-          <ReactExample />
-        </Slide>
-
-        <Slide transition={["zoom", "fade"]} bgColor="primary">
-          <Heading size={4} textColor='black'>Configuring Components</Heading>
-          <Heading size={6} textColor='tertiary'>props</Heading>
-        </Slide>
-
-        <Slide
-          notes={`
-              Rename MyComponent to Application
-
-              // Everything extends React.Component
-              class Application extends React.Component {
-                render() {
-                  return (
-                    <div>
-                      {this.props.title}
-                    </div>
-                  );
-                }
-              }
-
-              render(<Application title='Hello world!' />, mountNode);
-          `}
-        >
-          <ReactExample />
-        </Slide>
-
-        <Slide transition={["zoom", "fade"]} bgColor="primary">
-          <Heading size={4} textColor='black'>More Props</Heading>
-          <Heading size={6} textColor='tertiary'>Components for our Models</Heading>
-        </Slide>
-
-        <Slide
-          notes={`
-              Rename MyComponent to Person
-
-              // Everything extends React.Component
-              class Person extends React.Component {
-                render() {
-                  return (
-                    <div>
-                      <div>Name: {this.props.name}</div>
-                      <div>Age: {this.props.age}</div>
-                    </div>
-                  );
-                }
-              }
-
-              render(<Person name='Gordon' age={27} />, mountNode);
-          `}
-        >
-          <ReactExample />
-        </Slide>
+          <Slide transition={["zoom", "fade"]} bgColor="primary">
+              <Image width="100%" src={images.threeThreads}/>
+          </Slide>
 
         <Slide transition={["zoom", "fade"]} bgColor="primary">
           <Heading size={5}>React-Native?</Heading>
@@ -187,7 +194,8 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>Style Sheet support, including flexbox</ListItem></Appear>
             <Appear><ListItem>Animations</ListItem></Appear>
             <Appear><ListItem>Navigators</ListItem></Appear>
-            <Appear><ListItem>XHR / AJAX Support</ListItem></Appear>
+            <Appear><ListItem>fetch API, XMLHttpRequest, WebSockets</ListItem></Appear>
+              <Appear><ListItem>(async / await syntax!)</ListItem></Appear>
           </List>
         </Slide>
 
@@ -226,10 +234,6 @@ class HelloWorldApp extends React.Component {
 // Register your App, rather than mounting like before
 AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
           `}/>
-
-          <Appear>
-            <Text>Note: Live preview != Native</Text>
-          </Appear>
         </Slide>
 
         <Slide>
@@ -308,18 +312,6 @@ class JustifyContentBasics extends Component {
 
 AppRegistry.registerComponent('AwesomeProject', () => JustifyContentBasics);
           `}/>
-
-          <Appear>
-            <div>
-              <Text>New to Flex box?</Text>
-              <Link
-                textColor="tertiary"
-                href="http://flexboxfroggy.com/"
-              >
-                http://flexboxfroggy.com/
-              </Link>
-            </div>
-          </Appear>
         </Slide>
 
         <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
@@ -617,28 +609,6 @@ To run your app on Android:
           <Image width="75%" src={images.jestExample}/>
         </Slide>
 
-        <Slide transition={["slide"]}>
-          <Text textColor='tertiary'>
-            How it works
-          </Text>
-
-          <Image style={{ margin: 30 }} src={images.howItWorks}/>
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Text textColor='tertiary'>
-            Performance
-          </Text>
-
-          <List>
-            <Appear><ListItem>Animations - Precomputed and Optimised natively</ListItem></Appear>
-            <Appear><ListItem>Reduce re-renders</ListItem></Appear>
-            <Appear><ListItem>react-native-workers / native</ListItem></Appear>
-            <Appear><ListItem>Inbuilt performance tooling</ListItem></Appear>
-            <Appear><ListItem>Android - systrace, iOS Instruments</ListItem></Appear>
-          </List>
-        </Slide>
-
         <Slide transition={["spin", "slide"]} bgColor="tertiary">
           <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
             Other cool things
@@ -855,66 +825,6 @@ const styles = StyleSheet.create({
 
         <Slide transition={["slide"]}>
           <Image width="75%" src={images.reduxTimeTravel} />
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Text textColor="tertiary">
-            Who's using it?
-          </Text>
-
-          <Layout>
-            <Fill>
-              <Image
-                className='show-case__logo'
-                src={logos.airbnb}
-              />
-              <Text textColor='grey'>Airbnb</Text>
-            </Fill>
-
-            <Fill>
-              <Image
-                className='show-case__logo'
-                src={logos.facebook}
-              />
-              <Text textColor='grey'>Facebook</Text>
-            </Fill>
-
-            <Fill>
-              <Image
-                className='show-case__logo'
-                src={logos.gyroscope}
-              />
-              <Text textColor='grey'>Gyroscope</Text>
-            </Fill>
-          </Layout>
-
-          <div className='show-case__separator' />
-
-          <Layout>
-            <Fill>
-              <Image
-                className='show-case__logo'
-                src={logos.instagram}
-              />
-              <Text textColor='grey'>Instagram</Text>
-            </Fill>
-
-            <Fill>
-              <Image
-                className='show-case__logo'
-                src={logos.robin}
-              />
-              <Text textColor='grey'>Round Robin</Text>
-            </Fill>
-
-            <Fill>
-              <Image
-                className='show-case__logo'
-                src={logos.vogue}
-              />
-              <Text textColor='grey'>Vogue</Text>
-            </Fill>
-          </Layout>
         </Slide>
 
         <Slide transition={["spin", "slide"]} bgColor="tertiary">
