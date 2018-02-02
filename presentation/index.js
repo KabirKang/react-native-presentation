@@ -83,7 +83,7 @@ const theme = createTheme({
 // https://code.facebook.com/posts/1014532261909640/react-native-bringing-modern-web-techniques-to-mobile/
 //  "learn once, write anywhere"
 //   Different platforms have different looks, feels, and capabilities, and as such, we should still be developing discrete apps for each platform
-export default WithSlidesLink(class Presentation extends React.Component {
+export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["zoom", "slide"]} theme={theme} transitionDuration={500}>
@@ -925,4 +925,4 @@ const styles = StyleSheet.create({
       </Deck>
     );
   }
-});
+};
