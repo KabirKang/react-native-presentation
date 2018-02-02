@@ -3,44 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cabe5991-d74c-4672-8736-19cd1b7f0c85" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/0cf3674b51c6b34fc06971748310ea37.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/0df934a8bc20318cd908e6e0df4aee17.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/0eb0b6a080398ba8cd8b55782632cfe2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/1d36988f85e833dde1b5d1a545d1c8ed.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/1d90323a86770f1c08933398caa3d50f.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/217e75280d38a459ec726aa39c87e90b.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/286b60bf191f9f6f63c1c07c9b27c575.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/31e52de88799b99dbaafee9c5d1c5f52.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/3274366d5caa2590e0cef84e5876a245.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/444881b3ecd805a73ff2ceff561fca6e.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/4a32e9ca02b1aed9ff8dfefaf9d149e7.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/592f555c4e549b5b17ab9b16501fc397.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/672ccbaefd9bbda7b0be6d1591ec3e05.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/6bbc134a2aa1e26c2ded54ae7f8e7656.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/76735c2dd0d14ca72f01f1065b4d4cd6.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/7dcdb9d79a60fe7ce3f76e611552ec8a.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/7f44677aa8d23406cf317b7f2348125d.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/82ff70f63cba8420a1590feaea1f4684.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/83f5ebb7251bf2d3a1f43bffbb1e1860.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/8dfbea2926d48090a4ae2846cf3a04e3.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/9427491204ab665d3111bfb07705ec7c.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/a2cfc08630a266cea467b88ce3d1fc11.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/a445c15a91cf21acf2b13cebfe8866c6.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/a8748e7730450eab9163162eec51401b.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/bba94d0dfb2d98153eab1925faf7d589.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/be5504dbffa92cd2b48f647b450c1bd3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/bundle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/c3ffc729ecfb50568cb65f2a863aa303.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/ca28fbec409832593adb04864e048036.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/cb23138e47b159392bc81d474c3e4ad3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/d421d68ce7ce488bec808ebe6ed45c51.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/dafc5c380d74c7c48befe7e12860eedd.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/f19e597678a2a96b6182e7470dfb6be4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dist/f1a652a5a3df74d63fa343ce5bfbbc47.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/presentation/index.js" afterPath="$PROJECT_DIR$/presentation/index.js" />
-      <change beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/presentation/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="88">
@@ -79,6 +41,28 @@
                 <marker date="1517589390000" expanded="false" signature="10063:10071" ph="..." />
                 <marker date="1517589390000" expanded="false" signature="10140:10148" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="825">
+              <caret line="55" column="7" lean-forward="false" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,6 +102,7 @@
       <find>flexbox</find>
       <find>cecece</find>
       <find>quarte</find>
+      <find>docs/dist</find>
     </findStrings>
     <dirStrings>
       <dir>./node_modules</dir>
@@ -219,12 +204,12 @@
       <updated>1517562810609</updated>
       <workItem from="1517562812192" duration="7971000" />
       <workItem from="1517589005752" duration="85000" />
-      <workItem from="1517589169443" duration="245000" />
+      <workItem from="1517589169443" duration="399000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8301000" />
+    <option name="totallyTimeSpent" value="8455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -376,16 +361,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -487,6 +462,24 @@
             <marker date="1517589390000" expanded="false" signature="9983:9991" ph="..." />
             <marker date="1517589390000" expanded="false" signature="10063:10071" ph="..." />
             <marker date="1517589390000" expanded="false" signature="10140:10148" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="7" lean-forward="false" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
