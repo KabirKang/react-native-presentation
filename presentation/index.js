@@ -70,12 +70,12 @@ preloader(images);
 
 const theme = createTheme({
   primary: "white",
-  secondary: "#1F2022",
-  tertiary: "#03A9FC",
-  quartenary: "#CECECE"
+  secondary: "#505050",
+  tertiary: "#ff7e27",
+  quartenary: "#fafafa"
 }, {
-  primary: "Montserrat",
-  secondary: "Helvetica"
+  primary: "Avenir",
+  secondary: "Avenir"
 });
 
 // Useful links:
