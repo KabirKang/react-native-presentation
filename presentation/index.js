@@ -73,7 +73,7 @@ const theme = createTheme({
   primary: "white",
   secondary: "#505050",
   tertiary: "#ff7e27",
-  quartenary: "red"
+  quartenary: "#808080"
 }, {
   primary: "Avenir",
   secondary: "Avenir"
