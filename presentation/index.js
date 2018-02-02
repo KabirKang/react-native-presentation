@@ -199,6 +199,42 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
+          <Slide transition={["slide"]}>
+              <Heading textColor="tertiary">
+                  Networking
+              </Heading>
+              <List>
+                  <Appear>
+                      <ListItem>New Fetch API Supported</ListItem></Appear>
+                  <Appear><ListItem>Raw XHR implemented if required</ListItem></Appear>
+                  <Appear><ListItem>WebSockets Supported</ListItem></Appear>
+              </List>
+          </Slide>
+
+          <Slide transition={["slide"]}>
+              <Heading textColor="tertiary">
+                  Fetch API
+              </Heading>
+
+              <CodePane
+                  lang="jsx"
+                  source={require("raw-loader!../assets/fetch.example")}
+                  margin="20px auto"
+              />
+          </Slide>
+
+          <Slide transition={["slide"]}>
+              <Heading size={3} textColor="tertiary">
+                  Fetch API - async / await
+              </Heading>
+
+              <CodePane
+                  lang="jsx"
+                  source={require("raw-loader!../assets/async.example")}
+                  margin="20px auto"
+              />
+          </Slide>
+
         <Slide>
           <Heading size={5}>Useful Components</Heading>
           <NativeExample code={`
@@ -314,115 +350,19 @@ AppRegistry.registerComponent('AwesomeProject', () => JustifyContentBasics);
           `}/>
         </Slide>
 
-        <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
-          <Heading size={1} caps fit textColor="primary">
-            Other Components Libraries...
-          </Heading>
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Heading size={3} textColor="black">
-            React Native Material UI
-          </Heading>
-
-          <Layout>
-            <Fill>
-              <Image width="75%" src={images.reactNativeMaterial1}/>
-            </Fill>
-            <Fill>
-              <Image width="75%" src={images.reactNativeMaterial2}/>
-            </Fill>
-            <Fill>
-              <Image width="75%" src={images.reactNativeMaterial3}/>
-            </Fill>
-          </Layout>
-
-          <Link
-            textColor="tertiary"
-            href="https://github.com/xotahal/react-native-material-ui"
-          >
-            https://github.com/xotahal/react-native-material-ui
-          </Link>
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Heading size={1} fit textColor="black">
-            React Native Elements
-          </Heading>
-          <Image width="75%" src={images.reactNativeElements}/>
-          <Link
-            textColor="tertiary"
-            href="https://github.com/react-native-community/react-native-elements"
-          >
-            https://github.com/react-native-community/react-native-elements
-          </Link>
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Heading size={1} fit textColor="black">
-            Completely Custom?
-          </Heading>
-
-          <Layout>
-            <Fill>
-              <Image width='25%' src={images.androidCheckin}/>
-            </Fill>
-          </Layout>
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Heading textColor="tertiary">
-            Networking
-          </Heading>
-          <List>
-            <Appear>
-              <ListItem>New Fetch API Supported</ListItem></Appear>
-            <Appear><ListItem>Raw XHR implemented if required</ListItem></Appear>
-            <Appear><ListItem>WebSockets Supported</ListItem></Appear>
-          </List>
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Heading textColor="tertiary">
-            Fetch API
-          </Heading>
-
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../assets/fetch.example")}
-            margin="20px auto"
-          />
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Heading size={3} textColor="tertiary">
-            Fetch API - async / await
-          </Heading>
-
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../assets/async.example")}
-            margin="20px auto"
-          />
-        </Slide>
-
         <Slide transition={["slide"]}>
           <Text textColor="tertiary">
             Getting Started
-          </Text>
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Text textColor="tertiary">
-            Installing dependencies
           </Text>
 
           <CodePane
             lang="jsx"
             source={`
-> brew install node
-> brew install watchman
-> npm install -g react-native-cli
+> npm install -g create-react-native-app
+> create-react-native-app AwesomeProject
+> cd AwesomeProject
+> npm start
+> npm run eject
 `.trim()}
             margin="20px auto"
           />
@@ -437,41 +377,11 @@ AppRegistry.registerComponent('AwesomeProject', () => JustifyContentBasics);
           </Appear>
         </Slide>
 
-        <Slide transition={["slide"]}>
-          <Text textColor="tertiary">
-            Creating a new project
-          </Text>
 
-          <CodePane
-            lang="jsx"
-            source={`
-> react-native init AwesomeProject
-
-...
-
-✨  Done in 5.11s.
-
-To run your app on iOS:
-   cd /Users/you/Documents/AwesomeProject
-   react-native run-ios
-   - or -
-   Open ios/AwesomeProject.xcodeproj in Xcode
-   Hit the Run button
-
-To run your app on Android:
-   cd /Users/you/Documents/AwesomeProject
-   Have an Android emulator running (quickest way to get started), or a device connected
-   react-native run-android
-`.trim()}
-            margin="20px auto"
-          />
-        </Slide>
 
         <Slide transition={["slide"]}>
           <FolderStructure>
             <Folder name='AwesomeProject' textColor='tertiary'>
-              <Folder name='__tests__'/>
-
               <Folder name='android'>
                 <Folder name='app' textColor='grey'/>
                 <Folder name='gradle' textColor='grey'/>
@@ -483,10 +393,10 @@ To run your app on Android:
               </Folder>
 
               <File textColor='grey'>
-                index.android.js
+                index.js
               </File>
               <File textColor='grey'>
-                index.ios.js
+                package.json
               </File>
             </Folder>
           </FolderStructure>
@@ -500,10 +410,8 @@ To run your app on Android:
           <CodePane
             lang="jsx"
             source={`
-> react-native run-ios
-
-> emulator @Nexus_5_API_23 -dns-server 8.8.8.8
-> react-native run-android
+> npm run ios
+> npm run android
 `.trim()}
             margin="20px auto"
           />
